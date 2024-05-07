@@ -62,4 +62,11 @@
   height: 400px;
   margin: 20px;
 }
+
+.loginButton {
+  background-color: bisque;
+  border-radius: 5px;
+  width: 70px;
+  margin-right: 20px;
+}
 /*# sourceMappingURL=index.9e4c6fd2.css.map */

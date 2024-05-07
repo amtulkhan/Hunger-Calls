@@ -22,10 +22,10 @@ const Body = () => {
       json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
   };
-  if (resList.length === 0) {
-    return <Shimmer />;
-  }
-  return (
+
+  return resList.length === 0 ? (
+    <Shimmer />
+  ) : (
     <div className="body">
       <div className="filter">
         <button
