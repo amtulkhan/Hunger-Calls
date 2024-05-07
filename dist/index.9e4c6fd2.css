@@ -50,4 +50,16 @@
 .filter {
   margin: 10px;
 }
+
+.shimmer-container {
+  flex-wrap: wrap;
+  display: flex;
+}
+
+.shimmer-card {
+  background-color: #f0f0f0;
+  width: 200px;
+  height: 400px;
+  margin: 20px;
+}
 /*# sourceMappingURL=index.9e4c6fd2.css.map */
