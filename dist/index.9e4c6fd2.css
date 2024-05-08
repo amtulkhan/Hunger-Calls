@@ -49,6 +49,7 @@
 
 .filter {
   margin: 10px;
+  display: flex;
 }
 
 .shimmer-container {
