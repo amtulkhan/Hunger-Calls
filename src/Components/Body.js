@@ -4,6 +4,7 @@ import Shimmer from "./Shimmer";
 
 const Body = () => {
   const [resList, setResList] = useState([]);
+  const [filteredList, setFilteredList] = useState([]);
   const [search, setSearch] = useState("");
 
   useEffect(() => {
@@ -17,6 +18,10 @@ const Body = () => {
     const json = await data.json();
 
     setResList(
+      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+    );
+
+    setFilteredList(
       json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
   };
@@ -36,10 +41,10 @@ const Body = () => {
           <button
             className="search-btn"
             onClick={() => {
-              const filteredList = resList.filter((res) =>
-                res.info.name.includes(search)
+              const filterList = resList.filter((res) =>
+                res.info.name.toLowerCase().includes(search.toLowerCase())
               );
-              setResList(filteredList);
+              setFilteredList(filterList);
             }}
           >
             Search
@@ -49,10 +54,10 @@ const Body = () => {
           <button
             onClick={() => {
               console.log("click");
-              const filteredList = resList.filter(
+              const filterList = resList.filter(
                 (res) => res.info.avgRating > 4
               );
-              setResList(filteredList);
+              setResList(filterList);
             }}
           >
             Top Rated Restaurants
@@ -60,7 +65,7 @@ const Body = () => {
         </div>
       </div>
       <div className="res-container">
-        {resList.map((restaurant) => {
+        {filteredList.map((restaurant) => {
           return (
             <RestaurantCards key={restaurant.info.id} resData={restaurant} />
           );
