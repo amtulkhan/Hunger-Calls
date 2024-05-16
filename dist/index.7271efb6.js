@@ -34689,21 +34689,56 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _shimmer = require("./Shimmer");
+var _shimmerDefault = parcelHelpers.interopDefault(_shimmer);
+var _s = $RefreshSig$();
 const RestaurantMenu = ()=>{
+    _s();
+    const [restaurantMenu, setRestaurantMenu] = (0, _react.useState)(null);
+    (0, _react.useEffect)(()=>{
+        fetchMenu();
+    }, []);
+    const fetchMenu = async ()=>{
+        const data = await fetch("https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=18.61610&lng=73.72860&restaurantId=611808&catalog_qa=undefined&submitAction=ENTER");
+        const json = await data.json();
+        // console.log(json?.data?.cards[4].groupedCard.cardGroupMap.REGULAR.cards[1]);
+        setRestaurantMenu(json?.data?.cards[2]?.card?.card?.info);
+    };
+    //   if (restaurantMenu.length === 0) {
+    //     return <Shimmer />;
+    //   }
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-            children: "Res Name"
-        }, void 0, false, {
-            fileName: "src/Components/RestaurantMenu.js",
-            lineNumber: 4,
-            columnNumber: 7
-        }, undefined)
-    }, void 0, false, {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                children: restaurantMenu.name
+            }, void 0, false, {
+                fileName: "src/Components/RestaurantMenu.js",
+                lineNumber: 22,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                children: restaurantMenu.cuisines.join(", ")
+            }, void 0, false, {
+                fileName: "src/Components/RestaurantMenu.js",
+                lineNumber: 23,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                children: restaurantMenu.costForTwoMessage
+            }, void 0, false, {
+                fileName: "src/Components/RestaurantMenu.js",
+                lineNumber: 24,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
         fileName: "src/Components/RestaurantMenu.js",
-        lineNumber: 3,
+        lineNumber: 21,
         columnNumber: 5
     }, undefined);
 };
+_s(RestaurantMenu, "Dq7HCztndk1eQRkqL4UV941RWyU=");
 _c = RestaurantMenu;
 exports.default = RestaurantMenu;
 var _c;
@@ -34714,6 +34749,6 @@ $RefreshReg$(_c, "RestaurantMenu");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["9wh9R","1xC6H","2kQhy"], "2kQhy", "parcelRequire164e")
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react":"21dqq","./Shimmer":"c7s09"}]},["9wh9R","1xC6H","2kQhy"], "2kQhy", "parcelRequire164e")
 
 //# sourceMappingURL=index.7271efb6.js.map
