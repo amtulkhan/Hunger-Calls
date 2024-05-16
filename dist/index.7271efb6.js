@@ -34698,16 +34698,18 @@ const RestaurantMenu = ()=>{
     const [restaurantMenu, setRestaurantMenu] = (0, _react.useState)(null);
     (0, _react.useEffect)(()=>{
         fetchMenu();
-    }, []);
+    });
     const fetchMenu = async ()=>{
         const data = await fetch("https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=18.61610&lng=73.72860&restaurantId=611808&catalog_qa=undefined&submitAction=ENTER");
         const json = await data.json();
         // console.log(json?.data?.cards[4].groupedCard.cardGroupMap.REGULAR.cards[1]);
         setRestaurantMenu(json?.data?.cards[2]?.card?.card?.info);
     };
-    //   if (restaurantMenu.length === 0) {
-    //     return <Shimmer />;
-    //   }
+    if (restaurantMenu === null) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerDefault.default), {}, void 0, false, {
+        fileName: "src/Components/RestaurantMenu.js",
+        lineNumber: 18,
+        columnNumber: 12
+    }, undefined);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {

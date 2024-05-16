@@ -4,7 +4,7 @@ const RestaurantMenu = () => {
   const [restaurantMenu, setRestaurantMenu] = useState(null);
   useEffect(() => {
     fetchMenu();
-  }, []);
+  });
 
   const fetchMenu = async () => {
     const data = await fetch(
@@ -14,9 +14,9 @@ const RestaurantMenu = () => {
     // console.log(json?.data?.cards[4].groupedCard.cardGroupMap.REGULAR.cards[1]);
     setRestaurantMenu(json?.data?.cards[2]?.card?.card?.info);
   };
-  //   if (restaurantMenu.length === 0) {
-  //     return <Shimmer />;
-  //   }
+  if (restaurantMenu === null) {
+    return <Shimmer />;
+  }
   return (
     <div>
       <h1>{restaurantMenu.name}</h1>
