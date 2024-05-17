@@ -34747,11 +34747,16 @@ const RestaurantMenu = ()=>{
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                 children: itemCards.map((item)=>{
                     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                        children: item.card.info.name
-                    }, item.card.info.id, false, {
+                        children: [
+                            item.card.info.name,
+                            " -",
+                            " Rs.",
+                            item.card.info.price / 100 || item.card.info.defaultPrice / 100
+                        ]
+                    }, item.card.info.id, true, {
                         fileName: "src/Components/RestaurantMenu.js",
-                        lineNumber: 37,
-                        columnNumber: 18
+                        lineNumber: 38,
+                        columnNumber: 13
                     }, undefined);
                 })
             }, void 0, false, {
