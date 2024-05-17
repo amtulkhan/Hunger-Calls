@@ -34709,24 +34709,21 @@ const RestaurantMenu = ()=>{
     _s();
     const [restaurantMenu, setRestaurantMenu] = (0, _react.useState)(null);
     const { resId } = (0, _reactRouterDom.useParams)();
-    //   console.log(params);
-    //611808
     (0, _react.useEffect)(()=>{
         fetchMenu();
-        console.log("amtul");
     }, []);
     const fetchMenu = async ()=>{
         const data = await fetch((0, _constants.MENU_API) + resId);
         const json = await data.json();
         setRestaurantMenu(json.data);
     };
-    console.log(restaurantMenu);
     const resInfo = restaurantMenu?.cards[2]?.card?.card?.info || {};
     const { name, cuisines, costForTwoMessage } = resInfo;
-    const itemCards = restaurantMenu?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR.cards[1]?.card?.card?.itemCards || [];
+    const menuItems = restaurantMenu?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR.cards[2]?.card?.card?.itemCards;
+    const itemCards = menuItems || [];
     if (restaurantMenu === null) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerDefault.default), {}, void 0, false, {
         fileName: "src/Components/RestaurantMenu.js",
-        lineNumber: 33,
+        lineNumber: 30,
         columnNumber: 12
     }, undefined);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -34735,28 +34732,28 @@ const RestaurantMenu = ()=>{
                 children: name
             }, void 0, false, {
                 fileName: "src/Components/RestaurantMenu.js",
-                lineNumber: 37,
+                lineNumber: 34,
                 columnNumber: 16
             }, undefined),
             cuisines && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
                 children: cuisines.join(", ")
             }, void 0, false, {
                 fileName: "src/Components/RestaurantMenu.js",
-                lineNumber: 38,
+                lineNumber: 35,
                 columnNumber: 20
             }, undefined),
             costForTwoMessage && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
                 children: costForTwoMessage
             }, void 0, false, {
                 fileName: "src/Components/RestaurantMenu.js",
-                lineNumber: 39,
+                lineNumber: 36,
                 columnNumber: 29
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
                 children: "Menu"
             }, void 0, false, {
                 fileName: "src/Components/RestaurantMenu.js",
-                lineNumber: 40,
+                lineNumber: 37,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
@@ -34770,19 +34767,19 @@ const RestaurantMenu = ()=>{
                         ]
                     }, item.card.info.id, true, {
                         fileName: "src/Components/RestaurantMenu.js",
-                        lineNumber: 44,
+                        lineNumber: 41,
                         columnNumber: 13
                     }, undefined);
                 })
             }, void 0, false, {
                 fileName: "src/Components/RestaurantMenu.js",
-                lineNumber: 41,
+                lineNumber: 38,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/Components/RestaurantMenu.js",
-        lineNumber: 36,
+        lineNumber: 33,
         columnNumber: 5
     }, undefined);
 };

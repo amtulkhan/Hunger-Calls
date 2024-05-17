@@ -7,12 +7,9 @@ const RestaurantMenu = () => {
   const [restaurantMenu, setRestaurantMenu] = useState(null);
 
   const { resId } = useParams();
-  //   console.log(params);
-  //611808
 
   useEffect(() => {
     fetchMenu();
-    console.log("amtul");
   }, []);
 
   const fetchMenu = async () => {
@@ -21,13 +18,13 @@ const RestaurantMenu = () => {
 
     setRestaurantMenu(json.data);
   };
-  console.log(restaurantMenu);
+
   const resInfo = restaurantMenu?.cards[2]?.card?.card?.info || {};
   const { name, cuisines, costForTwoMessage } = resInfo;
-
-  const itemCards =
-    restaurantMenu?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR.cards[1]?.card
-      ?.card?.itemCards || [];
+  const menuItems =
+    restaurantMenu?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR.cards[2]?.card
+      ?.card?.itemCards;
+  const itemCards = menuItems || [];
 
   if (restaurantMenu === null) {
     return <Shimmer />;
