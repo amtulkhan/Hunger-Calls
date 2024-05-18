@@ -34601,7 +34601,8 @@ const About = ()=>{
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _userClassDefault.default), {
-                name: "Amtul Class"
+                name: "Amtul Class",
+                location: "Hyderabad"
             }, void 0, false, {
                 fileName: "src/Components/About.js",
                 lineNumber: 8,
@@ -34680,29 +34681,51 @@ var _reactDefault = parcelHelpers.interopDefault(_react);
 class UserClass extends (0, _reactDefault.default).Component {
     constructor(props){
         super(props);
+        this.state = {
+            count: 0
+        };
     }
     render() {
+        const { name, location } = this.props;
+        const { count } = this.state;
         return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
             className: "user-card",
             children: [
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                    children: this.props.name
+                    children: name
                 }, void 0, false, {
                     fileName: "src/Components/UserClass.js",
-                    lineNumber: 9,
+                    lineNumber: 16,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                    children: location
+                }, void 0, false, {
+                    fileName: "src/Components/UserClass.js",
+                    lineNumber: 17,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                    children: [
+                        "Count: ",
+                        count
+                    ]
+                }, void 0, true, {
+                    fileName: "src/Components/UserClass.js",
+                    lineNumber: 18,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
                     children: "Software Engineer"
                 }, void 0, false, {
                     fileName: "src/Components/UserClass.js",
-                    lineNumber: 10,
+                    lineNumber: 19,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "src/Components/UserClass.js",
-            lineNumber: 8,
+            lineNumber: 15,
             columnNumber: 7
         }, this);
     }
