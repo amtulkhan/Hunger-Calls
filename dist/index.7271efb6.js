@@ -34600,7 +34600,9 @@ const About = ()=>{
                 lineNumber: 7,
                 columnNumber: 7
             }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _userClassDefault.default), {}, void 0, false, {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _userClassDefault.default), {
+                name: "Amtul Class"
+            }, void 0, false, {
                 fileName: "src/Components/About.js",
                 lineNumber: 8,
                 columnNumber: 7
@@ -34676,28 +34678,31 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 class UserClass extends (0, _reactDefault.default).Component {
+    constructor(props){
+        super(props);
+    }
     render() {
         return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
             className: "user-card",
             children: [
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                    children: "Amtul"
+                    children: this.props.name
                 }, void 0, false, {
                     fileName: "src/Components/UserClass.js",
-                    lineNumber: 6,
+                    lineNumber: 9,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
                     children: "Software Engineer"
                 }, void 0, false, {
                     fileName: "src/Components/UserClass.js",
-                    lineNumber: 7,
+                    lineNumber: 10,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "src/Components/UserClass.js",
-            lineNumber: 5,
+            lineNumber: 8,
             columnNumber: 7
         }, this);
     }
