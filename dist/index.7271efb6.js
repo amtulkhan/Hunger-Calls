@@ -34715,11 +34715,23 @@ class UserClass extends (0, _reactDefault.default).Component {
                     lineNumber: 18,
                     columnNumber: 9
                 }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                    onClick: ()=>{
+                        this.setState({
+                            count: this.state.count + 1
+                        });
+                    },
+                    children: "Increase"
+                }, void 0, false, {
+                    fileName: "src/Components/UserClass.js",
+                    lineNumber: 19,
+                    columnNumber: 9
+                }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
                     children: "Software Engineer"
                 }, void 0, false, {
                     fileName: "src/Components/UserClass.js",
-                    lineNumber: 19,
+                    lineNumber: 26,
                     columnNumber: 9
                 }, this)
             ]
