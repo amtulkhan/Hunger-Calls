@@ -34685,7 +34685,21 @@ class UserClass extends (0, _reactDefault.default).Component {
             count: 0
         };
     }
-    render() {
+    /*  -- React Class Lifecycle Method 
+            Construstor
+            Render
+            componentdidmount
+            componentDidupdate
+            componentWillUnmount
+        
+      -- React functional Lifecycle Method/API
+            UseEffect
+             - takes a callback method and a dependency array(optional) 
+             - with just the callback function useeffect is called in every render (MOUNT)
+             - with an empty dependency array useEffect is called in the initial render (MOUNT)
+             - with a dependency useeffect is called only when the dependency array elements updates (UPDATE)   
+             - we can return from useEffect and clean up the code (UNMOUNT)  
+*/ render() {
         const { name, location } = this.props;
         const { count } = this.state;
         return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -34695,14 +34709,14 @@ class UserClass extends (0, _reactDefault.default).Component {
                     children: name
                 }, void 0, false, {
                     fileName: "src/Components/UserClass.js",
-                    lineNumber: 16,
+                    lineNumber: 31,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
                     children: location
                 }, void 0, false, {
                     fileName: "src/Components/UserClass.js",
-                    lineNumber: 17,
+                    lineNumber: 32,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
@@ -34712,7 +34726,7 @@ class UserClass extends (0, _reactDefault.default).Component {
                     ]
                 }, void 0, true, {
                     fileName: "src/Components/UserClass.js",
-                    lineNumber: 18,
+                    lineNumber: 33,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -34724,20 +34738,20 @@ class UserClass extends (0, _reactDefault.default).Component {
                     children: "Increase"
                 }, void 0, false, {
                     fileName: "src/Components/UserClass.js",
-                    lineNumber: 19,
+                    lineNumber: 34,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
                     children: "Software Engineer"
                 }, void 0, false, {
                     fileName: "src/Components/UserClass.js",
-                    lineNumber: 26,
+                    lineNumber: 41,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "src/Components/UserClass.js",
-            lineNumber: 15,
+            lineNumber: 30,
             columnNumber: 7
         }, this);
     }
