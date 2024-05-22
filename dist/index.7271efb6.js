@@ -34446,7 +34446,7 @@ const Body = ()=>{
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "res-container flex flex-wrap",
+                className: "res-container flex flex-wrap justify-center",
                 children: filteredList.map((restaurant)=>{
                     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
                         to: "restaurants/" + restaurant.info.id,
