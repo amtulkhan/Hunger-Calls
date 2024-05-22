@@ -36,16 +36,16 @@ const Body = () => {
     <Shimmer />
   ) : (
     <div className="body">
-      <div className="filter">
-        <div className="search">
+      <div className="filter flex">
+        <div className="search m-4 p-4 flex items-center">
           <input
             type="text"
-            className="search-input"
+            className="mx-2 border border-solid border-black"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
           ></input>
           <button
-            className="search-btn"
+            className="px-4 py-0.5 bg-green-200 rounded-lg "
             onClick={() => {
               const filterList = resList.filter((res) =>
                 res.info.name.toLowerCase().includes(search.toLowerCase())
@@ -56,8 +56,9 @@ const Body = () => {
             Search
           </button>
         </div>
-        <div>
+        <div className="search m-4 p-2 flex items-center">
           <button
+            className="px-4 py-4 bg-gray-100 rounded-lg"
             onClick={() => {
               console.log("click");
               const filterList = resList.filter(
@@ -70,7 +71,7 @@ const Body = () => {
           </button>
         </div>
       </div>
-      <div className="res-container">
+      <div className="res-container flex flex-wrap">
         {filteredList.map((restaurant) => {
           return (
             <Link
