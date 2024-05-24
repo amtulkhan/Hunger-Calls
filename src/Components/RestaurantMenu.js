@@ -27,7 +27,7 @@ const RestaurantMenu = () => {
     return <Shimmer />;
   }
   return (
-    <div className="text-center">
+    <div className="text-center justify-center">
       {name && <h1 className="font-bold my-6 text-2xl">{name}</h1>}
       {cuisines && (
         <p className="font-bold text-lg">
@@ -35,7 +35,7 @@ const RestaurantMenu = () => {
         </p>
       )}
       {categories.map((item) => {
-        return <RestaurantCategory />;
+        return <RestaurantCategory data={item?.card?.card} />;
       })}
     </div>
   );
