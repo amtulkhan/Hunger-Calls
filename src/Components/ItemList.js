@@ -9,7 +9,7 @@ const ItemList = ({ items }) => {
             key={item.card.info.id}
             className="p-2 m-2 border-gray-200 border-b-2 text-left flex justify-between"
           >
-            <div className="w-9/1">
+            <div className="w-9/12">
               <div className="py-22">
                 <span>{item.card.info.name}</span>
                 <span>
@@ -23,9 +23,14 @@ const ItemList = ({ items }) => {
             </div>
 
             <div className="w-3/12 p-4">
+              <div className="absolute">
+                <button className="p-1 bg-black text-white shadow-lg rounded-md">
+                  Add+
+                </button>
+              </div>
               <img
                 src={CDN_URL + item.card.info.imageId}
-                className="w-full"
+                className="w-full rounded-sm"
               ></img>
             </div>
           </div>

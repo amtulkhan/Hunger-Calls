@@ -260,6 +260,18 @@ img, video {
   margin: 1rem;
 }
 
+.m-16 {
+  margin: 4rem;
+}
+
+.m-10 {
+  margin: 2.5rem;
+}
+
+.m-5 {
+  margin: 1.25rem;
+}
+
 .mx-2 {
   margin-left: .5rem;
   margin-right: .5rem;
@@ -332,6 +344,14 @@ img, video {
   border-radius: .5rem;
 }
 
+.rounded-sm {
+  border-radius: .125rem;
+}
+
+.rounded-md {
+  border-radius: .375rem;
+}
+
 .border {
   border-width: 1px;
 }
@@ -379,12 +399,21 @@ img, video {
   background-color: rgb(252 231 243 / var(--tw-bg-opacity));
 }
 
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
 .p-2 {
   padding: .5rem;
 }
 
 .p-4 {
   padding: 1rem;
+}
+
+.p-1 {
+  padding: .25rem;
 }
 
 .px-4 {
