@@ -2975,14 +2975,15 @@ var _userContextDefault = parcelHelpers.interopDefault(_userContext);
 var _s = $RefreshSig$();
 const Applayout = ()=>{
     _s();
-    const [userName, setUserName] = (0, _react.useState)("");
+    const [userName, setUserName] = (0, _react.useState)();
     (0, _react.useEffect)(()=>{
         // API call to fetch the user details
         setUserName("Shahrukh");
-    });
+    }, []);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _userContextDefault.default).Provider, {
         value: {
-            LoggedInUser: userName
+            LoggedInUser: userName,
+            setUserName
         },
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
             children: [
@@ -3008,7 +3009,7 @@ const Applayout = ()=>{
         columnNumber: 5
     }, undefined);
 };
-_s(Applayout, "vEaHZE0e+1CQqj4bSOnm7luv5+Q=");
+_s(Applayout, "r4ciXLwRIZNmRjYlu4iYjpyheT0=");
 _c = Applayout;
 const Grocery = /*#__PURE__*/ (0, _react.lazy)(()=>require("c38fe66458832ca"));
 _c1 = Grocery;
@@ -34404,12 +34405,15 @@ var _shimmerDefault = parcelHelpers.interopDefault(_shimmer);
 var _reactRouterDom = require("react-router-dom");
 var _useOnlineStatus = require("../Utils/useOnlineStatus");
 var _useOnlineStatusDefault = parcelHelpers.interopDefault(_useOnlineStatus);
+var _userContext = require("../Utils/UserContext");
+var _userContextDefault = parcelHelpers.interopDefault(_userContext);
 var _s = $RefreshSig$();
 const Body = ()=>{
     _s();
     const [resList, setResList] = (0, _react.useState)([]);
     const [filteredList, setFilteredList] = (0, _react.useState)([]);
     const [search, setSearch] = (0, _react.useState)("");
+    const { LoggedInUser, setUserName } = (0, _react.useContext)((0, _userContextDefault.default));
     const PromotedCard = (0, _restaurantCard.PromotedRestaurantCard)((0, _restaurantCardDefault.default));
     (0, _react.useEffect)(()=>{
         fectData();
@@ -34425,12 +34429,12 @@ const Body = ()=>{
         children: "You are offline"
     }, void 0, false, {
         fileName: "src/Components/Body.js",
-        lineNumber: 34,
+        lineNumber: 36,
         columnNumber: 12
     }, undefined);
     return resList.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerDefault.default), {}, void 0, false, {
         fileName: "src/Components/Body.js",
-        lineNumber: 38,
+        lineNumber: 40,
         columnNumber: 5
     }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "body",
@@ -34448,7 +34452,7 @@ const Body = ()=>{
                                 onChange: (e)=>setSearch(e.target.value)
                             }, void 0, false, {
                                 fileName: "src/Components/Body.js",
-                                lineNumber: 43,
+                                lineNumber: 45,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -34460,13 +34464,13 @@ const Body = ()=>{
                                 children: "Search"
                             }, void 0, false, {
                                 fileName: "src/Components/Body.js",
-                                lineNumber: 49,
+                                lineNumber: 51,
                                 columnNumber: 11
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/Components/Body.js",
-                        lineNumber: 42,
+                        lineNumber: 44,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -34481,58 +34485,85 @@ const Body = ()=>{
                             children: "Top Rated Restaurants"
                         }, void 0, false, {
                             fileName: "src/Components/Body.js",
-                            lineNumber: 62,
+                            lineNumber: 64,
                             columnNumber: 11
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/Components/Body.js",
-                        lineNumber: 61,
+                        lineNumber: 63,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "search m-4 p-2 flex items-center",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                                className: "px-2",
+                                children: "Username:"
+                            }, void 0, false, {
+                                fileName: "src/Components/Body.js",
+                                lineNumber: 78,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                                className: "border border-black p-1",
+                                value: LoggedInUser,
+                                onChange: (e)=>{
+                                    setUserName(e.target.value);
+                                }
+                            }, void 0, false, {
+                                fileName: "src/Components/Body.js",
+                                lineNumber: 79,
+                                columnNumber: 11
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/Components/Body.js",
+                        lineNumber: 77,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/Components/Body.js",
-                lineNumber: 41,
+                lineNumber: 43,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "res-container flex flex-wrap justify-center",
                 children: filteredList.map((restaurant)=>{
-                    console.log(restaurant);
                     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
                         to: "restaurants/" + restaurant.info.id,
                         children: restaurant.info.promoted ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(PromotedCard, {
                             resData: restaurant
                         }, void 0, false, {
                             fileName: "src/Components/Body.js",
-                            lineNumber: 85,
+                            lineNumber: 96,
                             columnNumber: 17
                         }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restaurantCardDefault.default), {
                             resData: restaurant
                         }, void 0, false, {
                             fileName: "src/Components/Body.js",
-                            lineNumber: 87,
+                            lineNumber: 98,
                             columnNumber: 17
                         }, undefined)
                     }, restaurant.info.id, false, {
                         fileName: "src/Components/Body.js",
-                        lineNumber: 80,
+                        lineNumber: 91,
                         columnNumber: 13
                     }, undefined);
                 })
             }, void 0, false, {
                 fileName: "src/Components/Body.js",
-                lineNumber: 76,
+                lineNumber: 88,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/Components/Body.js",
-        lineNumber: 40,
+        lineNumber: 42,
         columnNumber: 5
     }, undefined);
 };
-_s(Body, "YBedeZb/9thRvzsYbrkf+t4T/Us=", false, function() {
+_s(Body, "DiszoDzJcSJcLGVNuQJzHIiUYi8=", false, function() {
     return [
         (0, _useOnlineStatusDefault.default)
     ];
@@ -34547,7 +34578,7 @@ $RefreshReg$(_c, "Body");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","./RestaurantCard":"kZnAN","react":"21dqq","./Shimmer":"c7s09","react-router-dom":"9xmpe","../Utils/useOnlineStatus":"bxLMZ","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"kZnAN":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","./RestaurantCard":"kZnAN","react":"21dqq","./Shimmer":"c7s09","react-router-dom":"9xmpe","../Utils/useOnlineStatus":"bxLMZ","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../Utils/UserContext":"6rHm9"}],"kZnAN":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$bb0d = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;

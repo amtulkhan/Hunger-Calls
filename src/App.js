@@ -10,14 +10,14 @@ import RestaurantMenu from "./Components/RestaurantMenu";
 import UserContext from "./Utils/UserContext";
 
 const Applayout = () => {
-  const [userName, setUserName] = useState("");
+  const [userName, setUserName] = useState();
 
   useEffect(() => {
     // API call to fetch the user details
     setUserName("Shahrukh");
-  });
+  }, []);
   return (
-    <UserContext.Provider value={{ LoggedInUser: userName }}>
+    <UserContext.Provider value={{ LoggedInUser: userName, setUserName }}>
       <div>
         <Header />
         <Outlet />

@@ -445,6 +445,11 @@ img, video {
   padding-bottom: 1rem;
 }
 
+.px-2 {
+  padding-left: .5rem;
+  padding-right: .5rem;
+}
+
 .text-left {
   text-align: left;
 }
