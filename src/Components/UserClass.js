@@ -1,4 +1,5 @@
 import React from "react";
+import UserContext from "../Utils/UserContext";
 class UserClass extends React.Component {
   constructor(props) {
     super(props);
@@ -24,6 +25,10 @@ class UserClass extends React.Component {
           Increase
         </button>
         <h2>Software Engineer</h2>
+        User:
+        <UserContext.Consumer>
+          {({ LoggedInUser }) => <h2>{LoggedInUser}</h2>}
+        </UserContext.Consumer>
       </div>
     );
   }

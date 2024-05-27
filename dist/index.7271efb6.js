@@ -34860,6 +34860,8 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
+var _userContext = require("../Utils/UserContext");
+var _userContextDefault = parcelHelpers.interopDefault(_userContext);
 class UserClass extends (0, _reactDefault.default).Component {
     constructor(props){
         super(props);
@@ -34877,14 +34879,14 @@ class UserClass extends (0, _reactDefault.default).Component {
                     children: name
                 }, void 0, false, {
                     fileName: "src/Components/UserClass.js",
-                    lineNumber: 16,
+                    lineNumber: 17,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
                     children: location
                 }, void 0, false, {
                     fileName: "src/Components/UserClass.js",
-                    lineNumber: 17,
+                    lineNumber: 18,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
@@ -34894,7 +34896,7 @@ class UserClass extends (0, _reactDefault.default).Component {
                     ]
                 }, void 0, true, {
                     fileName: "src/Components/UserClass.js",
-                    lineNumber: 18,
+                    lineNumber: 19,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -34906,20 +34908,34 @@ class UserClass extends (0, _reactDefault.default).Component {
                     children: "Increase"
                 }, void 0, false, {
                     fileName: "src/Components/UserClass.js",
-                    lineNumber: 19,
+                    lineNumber: 20,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
                     children: "Software Engineer"
                 }, void 0, false, {
                     fileName: "src/Components/UserClass.js",
-                    lineNumber: 26,
+                    lineNumber: 27,
+                    columnNumber: 9
+                }, this),
+                "User:",
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _userContextDefault.default).Consumer, {
+                    children: ({ LoggedInUser })=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                            children: LoggedInUser
+                        }, void 0, false, {
+                            fileName: "src/Components/UserClass.js",
+                            lineNumber: 30,
+                            columnNumber: 34
+                        }, this)
+                }, void 0, false, {
+                    fileName: "src/Components/UserClass.js",
+                    lineNumber: 29,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "src/Components/UserClass.js",
-            lineNumber: 15,
+            lineNumber: 16,
             columnNumber: 7
         }, this);
     }
@@ -34931,7 +34947,7 @@ exports.default = UserClass;
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"66EYZ":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../Utils/UserContext":"6rHm9"}],"66EYZ":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$84fc = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
