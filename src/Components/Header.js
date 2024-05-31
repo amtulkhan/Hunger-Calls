@@ -8,6 +8,7 @@ import { useSelector } from "react-redux";
 const Header = () => {
   const [buttonName, setButtonName] = useState("Login");
   const onlineStatus = useOnlineStatus();
+  //Subscribing to the store to get states using a selector
   const cartItems = useSelector((store) => store.cart.items);
 
   const { LoggedInUser } = useContext(UserContext);
