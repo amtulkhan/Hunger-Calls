@@ -633,6 +633,6 @@ $RefreshReg$(_c, "Grocery");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["2mnoL","1xC6H"], null, "parcelRequire164e")
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["2mnoL","1xC6H"], null, "parcelRequire164e")
 
 //# sourceMappingURL=Grocery.8992fa2f.js.map
