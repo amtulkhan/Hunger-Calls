@@ -1,9 +1,13 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import ItemList from "./ItemList";
+import { clearCart } from "../Utils/cartSlice";
 
 const Cart = () => {
   const items = useSelector((store) => store.cart.items);
-  console.log(items);
+  const dispatch = useDispatch();
+  const handleClearCart = () => {
+    dispatch(clearCart());
+  };
   return (
     <div className="text-center items-center mx-auto my-4 p-4 w-6/12">
       <div className="flex justify-between">
@@ -11,13 +15,19 @@ const Cart = () => {
         <button
           className="bg-black text-white rounded-md p-2"
           onClick={() => {
-            handleClick();
+            handleClearCart();
           }}
         >
           Clear Cart
         </button>
       </div>
-      <ItemList items={items} />
+      {items.length === 0 ? (
+        <div className="p-4 items-center m-10">
+          <h1 className="text-2xl">Oops, your cart is empty</h1>
+        </div>
+      ) : (
+        <ItemList items={items} />
+      )}
     </div>
   );
 };
