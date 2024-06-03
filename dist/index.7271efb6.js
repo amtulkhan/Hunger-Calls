@@ -40658,14 +40658,45 @@ const Cart = ()=>{
     const items = (0, _reactRedux.useSelector)((store)=>store.cart.items);
     console.log(items);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _itemListDefault.default), {
-            items: items
-        }, void 0, false, {
-            fileName: "src/Components/Cart.js",
-            lineNumber: 9,
-            columnNumber: 7
-        }, undefined)
-    }, void 0, false, {
+        className: "text-center items-center mx-auto my-4 p-4 w-6/12",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "flex justify-between",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                        className: "font-bold text-xl",
+                        children: "Your Cart"
+                    }, void 0, false, {
+                        fileName: "src/Components/Cart.js",
+                        lineNumber: 10,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        className: "bg-black text-white rounded-md p-2",
+                        onClick: ()=>{
+                            handleClick();
+                        },
+                        children: "Clear Cart"
+                    }, void 0, false, {
+                        fileName: "src/Components/Cart.js",
+                        lineNumber: 11,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/Components/Cart.js",
+                lineNumber: 9,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _itemListDefault.default), {
+                items: items
+            }, void 0, false, {
+                fileName: "src/Components/Cart.js",
+                lineNumber: 20,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
         fileName: "src/Components/Cart.js",
         lineNumber: 8,
         columnNumber: 5
