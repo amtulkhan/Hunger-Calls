@@ -34,6 +34,7 @@ test("Should render body component with search button", async () => {
 });
 
 test("Should filter top rated restaurants", async () => {
+  //act from test.utils is deprecated hence used it from react but that too now working, probably why the tests are failing
   await act(async () => {
     render(
       <BrowserRouter>
