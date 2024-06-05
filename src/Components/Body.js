@@ -44,6 +44,7 @@ const Body = () => {
         <div className="search m-4 p-4 flex items-center">
           <input
             type="text"
+            data-testid="Search"
             className="mx-2 border border-solid border-black"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
@@ -64,11 +65,10 @@ const Body = () => {
           <button
             className="px-4 py-4 bg-gray-100 rounded-lg"
             onClick={() => {
-              console.log("click");
-              const filterList = resList.filter(
-                (res) => res.info.avgRating > 4
-              );
-              setResList(filterList);
+              const filterList = resList.filter((res) => {
+                return res.info.avgRating > 4;
+              });
+              setFilteredList(filterList);
             }}
           >
             Top Rated Restaurants

@@ -35660,6 +35660,7 @@ const Body = ()=>{
                         children: [
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
                                 type: "text",
+                                "data-testid": "Search",
                                 className: "mx-2 border border-solid border-black",
                                 value: search,
                                 onChange: (e)=>setSearch(e.target.value)
@@ -35677,7 +35678,7 @@ const Body = ()=>{
                                 children: "Search"
                             }, void 0, false, {
                                 fileName: "src/Components/Body.js",
-                                lineNumber: 51,
+                                lineNumber: 52,
                                 columnNumber: 11
                             }, undefined)
                         ]
@@ -35691,19 +35692,20 @@ const Body = ()=>{
                         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                             className: "px-4 py-4 bg-gray-100 rounded-lg",
                             onClick: ()=>{
-                                console.log("click");
-                                const filterList = resList.filter((res)=>res.info.avgRating > 4);
-                                setResList(filterList);
+                                const filterList = resList.filter((res)=>{
+                                    return res.info.avgRating > 4;
+                                });
+                                setFilteredList(filterList);
                             },
                             children: "Top Rated Restaurants"
                         }, void 0, false, {
                             fileName: "src/Components/Body.js",
-                            lineNumber: 64,
+                            lineNumber: 65,
                             columnNumber: 11
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/Components/Body.js",
-                        lineNumber: 63,
+                        lineNumber: 64,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
