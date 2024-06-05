@@ -35,8 +35,7 @@ const Body = () => {
   if (onlineStatus === false) {
     return <h1>You are offline</h1>;
   }
-
-  return resList.length === 0 ? (
+  return resList?.length === 0 ? (
     <Shimmer />
   ) : (
     <div className="body">
