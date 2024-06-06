@@ -36441,6 +36441,7 @@ const RestaurantCategory = ({ data, showItems, setShowIndex })=>{
     const handleClick = ()=>{
         setShowIndex();
     };
+    console.log(data);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "w-6/12 mx-auto my-4 bg-gray-50 shadow-lg p-4",
         children: [
@@ -36458,33 +36459,33 @@ const RestaurantCategory = ({ data, showItems, setShowIndex })=>{
                         ]
                     }, void 0, true, {
                         fileName: "src/Components/RestaurantCategory.js",
-                        lineNumber: 14,
+                        lineNumber: 15,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                         children: "\u2B07\uFE0F"
                     }, void 0, false, {
                         fileName: "src/Components/RestaurantCategory.js",
-                        lineNumber: 17,
+                        lineNumber: 18,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/Components/RestaurantCategory.js",
-                lineNumber: 10,
+                lineNumber: 11,
                 columnNumber: 7
             }, undefined),
             showItems && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _itemListDefault.default), {
                 items: data.itemCards
             }, void 0, false, {
                 fileName: "src/Components/RestaurantCategory.js",
-                lineNumber: 20,
+                lineNumber: 21,
                 columnNumber: 21
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/Components/RestaurantCategory.js",
-        lineNumber: 9,
+        lineNumber: 10,
         columnNumber: 5
     }, undefined);
 };
@@ -36523,6 +36524,7 @@ const ItemList = ({ items })=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         children: items.map((item)=>{
             return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                "data-testid": "foodItems",
                 className: "p-2 m-2 border-gray-200 border-b-2 text-left flex justify-between",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -36535,7 +36537,7 @@ const ItemList = ({ items })=>{
                                         children: item.card.info.name
                                     }, void 0, false, {
                                         fileName: "src/Components/ItemList.js",
-                                        lineNumber: 21,
+                                        lineNumber: 22,
                                         columnNumber: 17
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
@@ -36545,13 +36547,13 @@ const ItemList = ({ items })=>{
                                         ]
                                     }, void 0, true, {
                                         fileName: "src/Components/ItemList.js",
-                                        lineNumber: 22,
+                                        lineNumber: 23,
                                         columnNumber: 17
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/Components/ItemList.js",
-                                lineNumber: 20,
+                                lineNumber: 21,
                                 columnNumber: 15
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -36559,13 +36561,13 @@ const ItemList = ({ items })=>{
                                 children: item.card.info.description
                             }, void 0, false, {
                                 fileName: "src/Components/ItemList.js",
-                                lineNumber: 29,
+                                lineNumber: 30,
                                 columnNumber: 15
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/Components/ItemList.js",
-                        lineNumber: 19,
+                        lineNumber: 20,
                         columnNumber: 13
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -36579,12 +36581,12 @@ const ItemList = ({ items })=>{
                                     children: "Add+"
                                 }, void 0, false, {
                                     fileName: "src/Components/ItemList.js",
-                                    lineNumber: 34,
+                                    lineNumber: 35,
                                     columnNumber: 17
                                 }, undefined)
                             }, void 0, false, {
                                 fileName: "src/Components/ItemList.js",
-                                lineNumber: 33,
+                                lineNumber: 34,
                                 columnNumber: 15
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
@@ -36592,13 +36594,13 @@ const ItemList = ({ items })=>{
                                 className: "w-full rounded-sm"
                             }, void 0, false, {
                                 fileName: "src/Components/ItemList.js",
-                                lineNumber: 41,
+                                lineNumber: 42,
                                 columnNumber: 15
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/Components/ItemList.js",
-                        lineNumber: 32,
+                        lineNumber: 33,
                         columnNumber: 13
                     }, undefined)
                 ]
